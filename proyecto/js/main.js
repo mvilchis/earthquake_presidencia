@@ -32,25 +32,32 @@ var myLayer = L.geoJson(edificios, {
 
               }).addTo(map);
 
-
 function pointToLayerOption(feature, latlng) {
+  // Divide by type
+  var img_url;
+  if (feature.properties.TYPE.toLowerCase() == "edificio") {
+    img_url="edificio";
+  } else if (feature.properties.TYPE.toLowerCase() == "escuela") {
+    img_url = "escuela";
+  }else if (feature.properties.TYPE.toLowerCase() == "casa") {
+    img_url = "casa";
+  }else if (feature.properties.TYPE.toLowerCase() == "hospital") {
+    img_url = "hospital";
+  }
   if (feature.properties.STATUS==1){
-    return L.marker(latlng,
-      {icon: L.icon({   iconUrl: 'img/edificio-verde.png',
-      iconSize: [28, 38],
+    img_url+="_verde";
+  }else if(feature.properties.STATUS==-1){
+    img_url+="_rojo";
+  }else {
+    img_url+="_gris";
+  }
+  img_url+=".png";
+  return L.marker(latlng,
+      {icon: L.icon({   iconUrl: 'img/'+img_url,
+      iconSize: [28, 28],
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76]}) }
     );
-  }
-  else if (feature.properties.STATUS == 0) {
-    return L.marker(latlng,
-      {icon: L.icon({   iconUrl: 'img/edificio.png',
-      iconSize: [38, 38],
-      iconAnchor: [22, 94],
-      popupAnchor: [-3, -76]}) }
-    );
-  }
-
 }
 var legend = L.control({position: 'bottomright'});
 
@@ -61,14 +68,9 @@ legend.onAdd = function (map) {
            labels = [];
 
   div.innerHTML += '<p><b>Guia de color</b></p>';
-
-  div.innerHTML += '<i style="background:' + '#a63603' + '"></i> ' +
-                 "Edificio fuera de riesgo"+ '<br>' ;
-
-  div.innerHTML += '<i style="background:' + '#000' + '"></i> ' +
-                    "Estado desconocido" + '<br>' ;
-  div.innerHTML += '<i style="background:' + '#a63603' + '"></i> ' +
-                    "Edificio en estado de riesgo" ;
+  div.innerHTML += '<i style="background:#00CC99"></i>Edificio fuera de riesgo <br>' ;
+  div.innerHTML += '<i style="background:#8C8C8C"></i>Estado desconocido<br>' ;
+  div.innerHTML += '<i style="background:#FF6666"></i> Edificio en estado de riesgo' ;
 
        return div;
 };
@@ -81,17 +83,24 @@ function onEachFeatureOption(feature, layer){
   // Bind layer to feature
   feature.layer = layer;
   if (feature.properties.STATUS == 1) {
-    var status_label =  "Si es seguro";
+    var status_label =  "<span style='font-weight:700;color:white;'>ES SEGURO</span>";
+    var color = "#00CC99";
   } else if (feature.properties.STATUS == 0) {
-    var status_label =  "Estado desconocido";
+    var status_label =  "<span style='font-weight:700;color:white;'>SE DESCONOCE</span>";
+    var color = "#8C8C8C";
   } else if  (feature.properties.STATUS == -1) {
-    var status_label =  "No es seguro";
+    var status_label =  "<span style='font-weight:700;color:white;'>NO ES SEGURO</span>";
+    var color = "#FF6666";
   }
   var more_info=feature.properties.MORE_INFO;
   if (more_info != "") {
-    more_info ='Mas informacion: '+ more_info;
+    more_info ='<span style="font-size:15px;color:white;">Mas informacion: <b>'+ more_info+'</b></span>';
   }
-  layer.bindPopup('<b>' + feature.properties.ADDRESS + '</b> </br>'
-        + 'El estado del edificio:' + status_label + '</br>'
-        + more_info );
+  layer.bindPopup('<div class="uno" style="background:'+color+'">'+
+                  '<div style="padding:20px">'+
+                  '<span style="font-size:15px;color:white;"><i class="fa fa-map-marker" aria-hidden="true"></i>  EL ESTADO DEL EDIFICIO:' + status_label + '</span></br></br>'+
+                  '<span style="font-size:20px;color:white;">'+ feature.properties.ADDRESS+'</span>'+'</br></br>'+
+                  '<span style="font-size:15px;color:white;">Tipo de edificacion:' + '<b>'+feature.properties.TYPE +'</b></span>'+'</br>'+
+                  more_info +"</br></div></div>");
+  //layer.setStyle({fillColor :color})
 }
