@@ -3,7 +3,7 @@
 
 //Leaflet normal customize
 var mexico_coordinates =[19.4326, -99.1332];
-var map = new L.Map('map', { maxZoom: 14,
+var map = new L.Map('map', { maxZoom: 16,
                            minZoom: 5,
                            scrollWheelZoom: false
                          }).setView(mexico_coordinates,13);
@@ -17,7 +17,7 @@ map.addLayer(basemap);
 // Fuse search options
 var searchOptions = {
   title: 'Busca tu edificio',
-  placeholder: 'Busca tu edificio'
+  placeholder: 'Busca tu edificio',
 };
 
 // Add search control
@@ -52,15 +52,40 @@ function pointToLayerOption(feature, latlng) {
   }
 
 }
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+ var div = L.DomUtil.create('div', 'info legend'),
+           grades = [50000, 60000, 70000, 80000, 90000],
+           labels = [];
+
+  div.innerHTML += '<p><b>Guia de color</b></p>';
+
+  div.innerHTML += '<i style="background:' + '#a63603' + '"></i> ' +
+                 "Edificio fuera de riesgo"+ '<br>' ;
+
+  div.innerHTML += '<i style="background:' + '#000' + '"></i> ' +
+                    "Estado desconocido" + '<br>' ;
+  div.innerHTML += '<i style="background:' + '#a63603' + '"></i> ' +
+                    "Edificio en estado de riesgo" ;
+
+       return div;
+};
+
+legend.addTo(map);
+
 
 // Add popups
 function onEachFeatureOption(feature, layer){
   // Bind layer to feature
   feature.layer = layer;
   if (feature.properties.STATUS == 1) {
-    var status_label =  "Si es seguro"
-  }else {
-    var status_label =  "No es seguro"
+    var status_label =  "Si es seguro";
+  } else if (feature.properties.STATUS == 0) {
+    var status_label =  "Estado desconocido";
+  } else if  (feature.properties.STATUS == -1) {
+    var status_label =  "No es seguro";
   }
   var more_info=feature.properties.MORE_INFO;
   if (more_info != "") {

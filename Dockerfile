@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
         wget \
   librsvg2-bin \
         supervisor \
-        cron
+        cron \
+        curl
 RUN apt-get clean
 
 # Apache
@@ -48,6 +49,7 @@ ADD crontab /etc/cron.d/download-cron
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/download-cron
 
+RUN crontab < /etc/cron.d/download-cron
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
 

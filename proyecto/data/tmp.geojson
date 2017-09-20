@@ -1,5 +1,0 @@
-var edificios = {
-"type": "FeatureCollection",
-"features": [
-{ "type": "Feature", "properties": { "ADDRESS": "Av Nuevo León 210, Hipódromo, 06100 Ciudad de México, CDMX, Mexico ", "STATUS":1, "NAME": "","MORE_INFO":"Se termino la verifcacion a las 10:20am","TYPE":"Edificio"}, "geometry": { "type": "Point", "coordinates": [ -99.171421,19.40503 ] }},{ "type": "Feature", "properties": { "ADDRESS": "Molino del Rey PUERTA 1 RESIDENCIA OFICIAL DE LOS PINOS, San Miguel Chapultepec I Secc, 11850 Ciudad de México, CDMX, Mexico ", "STATUS":0, "NAME": "Los pinos","MORE_INFO":"","TYPE":"Edificio"}, "geometry": { "type": "Point", "coordinates": [ -99.1912523,19.4156143 ] }},
-]}
