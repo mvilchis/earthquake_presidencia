@@ -1,0 +1,6 @@
+var edificios = {
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "ADDRESS": "Av Nuevo León 210, Hipódromo, 06100 Ciudad de México, CDMX, Mexico ", "STATUS":1, "NAME": ""}, "geometry": { "type": "Point", "coordinates": [ -99.171421,19.40503 ] }},
+{ "type": "Feature", "properties": { "ADDRESS": "Los pinos ", "STATUS":0, "NAME": "Los pinos"}, "geometry": { "type": "Point", "coordinates": [ -99.1912523,19.4156143] }},
+]}

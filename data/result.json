@@ -1,0 +1,481 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "210",
+               "short_name" : "210",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Avenida Nuevo León",
+               "short_name" : "Av Nuevo León",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Hipódromo",
+               "short_name" : "Hipódromo",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Cuauhtémoc",
+               "short_name" : "Cuauhtémoc",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "06100",
+               "short_name" : "06100",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Av Nuevo León 210, Hipódromo, 06100 Ciudad de México, CDMX, Mexico",
+         "geometry" : {
+            "location" : {
+               "lat" : 19.4050615,
+               "lng" : -99.1712615
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.4064104802915,
+                  "lng" : -99.1699125197085
+               },
+               "southwest" : {
+                  "lat" : 19.4037125197085,
+                  "lng" : -99.17261048029151
+               }
+            }
+         },
+         "place_id" : "ChIJZzGVTGr_0YURYSRSv1YUjdw",
+         "types" : [ "street_address" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Nuevo León",
+               "short_name" : "Nuevo León",
+               "types" : [ "establishment", "point_of_interest", "transit_station" ]
+            },
+            {
+               "long_name" : "Hipódromo",
+               "short_name" : "Hipódromo",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "06100",
+               "short_name" : "06100",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Nuevo León, Hipódromo, 06100 Ciudad de México, CDMX, Mexico",
+         "geometry" : {
+            "location" : {
+               "lat" : 19.4058168,
+               "lng" : -99.17183510000001
+            },
+            "location_type" : "GEOMETRIC_CENTER",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.4071657802915,
+                  "lng" : -99.17048611970851
+               },
+               "southwest" : {
+                  "lat" : 19.4044678197085,
+                  "lng" : -99.17318408029152
+               }
+            }
+         },
+         "place_id" : "ChIJYwGXR2r_0YUR9YIyFma11-0",
+         "types" : [ "establishment", "point_of_interest", "transit_station" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Hipódromo",
+               "short_name" : "Hipódromo",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Cuauhtémoc",
+               "short_name" : "Cuauhtémoc",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "06100",
+               "short_name" : "06100",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Hipódromo, 06100 Ciudad de México, CDMX, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 19.4167765,
+                  "lng" : -99.16540409999999
+               },
+               "southwest" : {
+                  "lat" : 19.4002009,
+                  "lng" : -99.18068219999999
+               }
+            },
+            "location" : {
+               "lat" : 19.4093682,
+               "lng" : -99.1719095
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.4167765,
+                  "lng" : -99.16540409999999
+               },
+               "southwest" : {
+                  "lat" : 19.4002009,
+                  "lng" : -99.18068219999999
+               }
+            }
+         },
+         "place_id" : "ChIJIb7VFUL_0YURABkbMjDDqqQ",
+         "types" : [ "political", "sublocality", "sublocality_level_1" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Mexico City",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Mexico City",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Mexico City, CDMX, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 19.5927571,
+                  "lng" : -98.9604482
+               },
+               "southwest" : {
+                  "lat" : 19.1887101,
+                  "lng" : -99.3267771
+               }
+            },
+            "location" : {
+               "lat" : 19.4326077,
+               "lng" : -99.133208
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.5927571,
+                  "lng" : -98.9604482
+               },
+               "southwest" : {
+                  "lat" : 19.1887101,
+                  "lng" : -99.3267771
+               }
+            }
+         },
+         "place_id" : "ChIJB3UJ2yYAzoURQeheJnYQBlQ",
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "06100",
+               "short_name" : "06100",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Hipódromo",
+               "short_name" : "Hipódromo",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Cuauhtémoc",
+               "short_name" : "Cuauhtémoc",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Ciudad de México",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Hipódromo, 06100 Ciudad de México, CDMX, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 19.4167806,
+                  "lng" : -99.16539519999999
+               },
+               "southwest" : {
+                  "lat" : 19.4000788,
+                  "lng" : -99.18074589999999
+               }
+            },
+            "location" : {
+               "lat" : 19.4093682,
+               "lng" : -99.1719095
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.4167806,
+                  "lng" : -99.16539519999999
+               },
+               "southwest" : {
+                  "lat" : 19.4000788,
+                  "lng" : -99.18074589999999
+               }
+            }
+         },
+         "place_id" : "ChIJ1z2l-UH_0YUR_0Z0YYzEqrI",
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Cuauhtémoc",
+               "short_name" : "Cuauhtémoc",
+               "types" : [ "administrative_area_level_3", "political" ]
+            },
+            {
+               "long_name" : "Mexico City",
+               "short_name" : "México D.F.",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Mexico City",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Cuauhtémoc, Mexico City, CDMX, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 19.4658242,
+                  "lng" : -99.1222411
+               },
+               "southwest" : {
+                  "lat" : 19.3997898,
+                  "lng" : -99.1843038
+               }
+            },
+            "location" : {
+               "lat" : 19.4356338,
+               "lng" : -99.14951069999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.4658242,
+                  "lng" : -99.1222411
+               },
+               "southwest" : {
+                  "lat" : 19.3997898,
+                  "lng" : -99.1843038
+               }
+            }
+         },
+         "place_id" : "ChIJaTJq8NT40YUR5Qb8P85Wlqc",
+         "types" : [ "administrative_area_level_3", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Mexico City",
+               "short_name" : "CDMX",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Mexico City, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 19.5927571,
+                  "lng" : -98.94030269999999
+               },
+               "southwest" : {
+                  "lat" : 19.0482366,
+                  "lng" : -99.36492419999999
+               }
+            },
+            "location" : {
+               "lat" : 19.2464696,
+               "lng" : -99.10134979999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.5927571,
+                  "lng" : -98.94030269999999
+               },
+               "southwest" : {
+                  "lat" : 19.0482366,
+                  "lng" : -99.36492419999999
+               }
+            }
+         },
+         "place_id" : "ChIJJyk1sTYAzoURW4rR6E6e_d4",
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Mexico City Metropolitan Area",
+               "short_name" : "Mexico City Metropolitan Area",
+               "types" : [ "political" ]
+            },
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Mexico City Metropolitan Area, Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 20.0682618,
+                  "lng" : -98.5968666
+               },
+               "southwest" : {
+                  "lat" : 18.9353397,
+                  "lng" : -99.6498895
+               }
+            },
+            "location" : {
+               "lat" : 19.5337747,
+               "lng" : -99.0128926
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 20.0682618,
+                  "lng" : -98.5968666
+               },
+               "southwest" : {
+                  "lat" : 18.9353397,
+                  "lng" : -99.6498895
+               }
+            }
+         },
+         "place_id" : "ChIJ0f3SX4Pv0YUR1Ko4LNnRKW8",
+         "types" : [ "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Mexico",
+               "short_name" : "MX",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Mexico",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 32.7186534,
+                  "lng" : -86.5887
+               },
+               "southwest" : {
+                  "lat" : 14.3895,
+                  "lng" : -118.6523001
+               }
+            },
+            "location" : {
+               "lat" : 23.634501,
+               "lng" : -102.552784
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.7186534,
+                  "lng" : -86.5887
+               },
+               "southwest" : {
+                  "lat" : 14.3895,
+                  "lng" : -118.6523001
+               }
+            }
+         },
+         "place_id" : "ChIJU1NoiDs6BIQREZgJa760ZO0",
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
