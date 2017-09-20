@@ -58,11 +58,15 @@ function onEachFeatureOption(feature, layer){
   // Bind layer to feature
   feature.layer = layer;
   if (feature.properties.STATUS == 1) {
-    var status_label =  "es seguro"
+    var status_label =  "Si es seguro"
   }else {
-    var status_label =  "no seguro"
+    var status_label =  "No es seguro"
+  }
+  var more_info=feature.properties.MORE_INFO;
+  if (more_info != "") {
+    more_info ='Mas informacion: '+ more_info;
   }
   layer.bindPopup('<b>' + feature.properties.ADDRESS + '</b> </br>'
-        + 'El estado del edificio' + '</br>'
-        + status_label );
+        + 'El estado del edificio:' + status_label + '</br>'
+        + more_info );
 }

@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
         openssh-server \
         wget \
   librsvg2-bin \
-        supervisor
+        supervisor \
+        cron
 RUN apt-get clean
 
 # Apache
@@ -29,7 +30,7 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 # Supervisor
 RUN echo -e '[program:apache2]\ncommand=/bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"\nautorestart=true\n\n' >> /etc/supervisor/supervisord.conf
 RUN echo -e '[program:sshd]\ncommand=/usr/sbin/sshd -D\n\n' >> /etc/supervisor/supervisord.conf
-
+RUN echo -e '[program:cron]\ncommand=cron'>> /etc/supervisor/supervisord.conf
 # Plataforma
 
 ADD proyecto /var/www
@@ -38,5 +39,18 @@ ADD proyecto /var/www
 RUN chown -R $USER:$USER /var/www/
 RUN chmod a+w /var/www -R
 
-EXPOSE 80 3306 22
+
+
+################Cron ######################
+
+ADD crontab /etc/cron.d/download-cron
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/download-cron
+
+# Create the log file to be able to run tail
+RUN touch /var/log/cron.log
+
+
+EXPOSE 80
 CMD exec supervisord -n
