@@ -32,7 +32,7 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 # Supervisor
 RUN echo -e '[program:apache2]\ncommand=/bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"\nautorestart=true\n\n' >> /etc/supervisor/supervisord.conf
 RUN echo -e '[program:sshd]\ncommand=/usr/sbin/sshd -D\n\n' >> /etc/supervisor/supervisord.conf
-RUN echo -e '[program:cron]\ncommand=-f -L 15'>> /etc/supervisor/supervisord.conf
+RUN echo -e '[program:cron]\ncommand=cron -f -L 15'>> /etc/supervisor/supervisord.conf
 # Plataforma
 
 ADD proyecto /var/www
